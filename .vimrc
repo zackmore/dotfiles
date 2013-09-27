@@ -17,10 +17,20 @@ set expandtab
 set smarttab
 set backspace=2
 
-let Tlist_Ctags_Cmd='/usr/bin/ctags'
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
-let Tlist_Use_Right_Window=1
-
 runtime macros/matchit.vim
 filetype plugin on
+
+" Vundle start
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vandle'
+
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'vim-scripts/Emmet.vim'
+Bundle 'scrooloose/nerdtree'
+
+filetype plugin indent on
