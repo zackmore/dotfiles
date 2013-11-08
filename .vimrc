@@ -21,6 +21,11 @@ runtime macros/matchit.vim
 filetype plugin on
 
 " Vundle start
+" To use vundle, follow these steps:
+" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+" Launch vim, run :BundleInstall
+" done
+
 set nocompatible
 filetype off
 
