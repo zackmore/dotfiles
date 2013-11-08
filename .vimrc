@@ -27,7 +27,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vandle'
+Bundle 'gmarik/vundle'
 
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'vim-scripts/Emmet.vim'
