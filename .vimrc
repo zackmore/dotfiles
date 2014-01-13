@@ -39,3 +39,6 @@ Bundle 'vim-scripts/Emmet.vim'
 Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on
+
+" Maps
+map <C-B> :NERDTreeToggle<CR>
