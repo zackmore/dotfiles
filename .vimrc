@@ -42,3 +42,6 @@ filetype plugin indent on
 
 " Maps
 map <C-B> :NERDTreeToggle<CR>
+
+" AutoCommands
+au VimEnter * NERDTree
