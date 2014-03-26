@@ -10,4 +10,5 @@ My personal dotfiles.
 
 ## About .emacs
 
+Need install `ibus-el` first. `sudo apt-get install ibus-el`
 Should set ibus keyboard shortcus enable/disable to `shift+space`, or it will conflict with the `set mark` in Emacs.
