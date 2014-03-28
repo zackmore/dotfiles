@@ -2,5 +2,5 @@
 export WORKON_HOME=$HOME/Workspace/Envs
 source /usr/local/bin/virtualenvwrapper.sh
 
-# swap ctrl and capslock for emacs
-setxkbmap -option ctrl:swapcaps
+# set caps-lock to ctrl
+setxkbmap -option ctrl:nocaps
