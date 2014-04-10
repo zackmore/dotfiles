@@ -7,7 +7,7 @@
 ;; (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
 
 (add-hook 'dired-mode-hook 'auto-revert-mode)
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+;; (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (global-set-key "\C-c1" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
@@ -45,20 +45,9 @@
   ;; If there is more than one, they won't work right.
  )
 
-;; plugins
-(add-to-list 'load-path "~/.emacs.d")
 
-;; color theme
-;; http://www.emacswiki.org/emacs/ColorTheme
-(require 'color-theme)
-(eval-after-load "color-theme"
-    '(progn
-       (color-theme-initialize)
-       (color-theme-clarity)))
-
-;; auto-complete
-;; http://www.emacswiki.org/emacs/AutoComplete
-(require 'auto-complete-config)
-(ac-config-default)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(put 'scroll-left 'disabled nil)
+(require 'package)
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+(package-initialize)
