@@ -10,9 +10,9 @@ set fileencodings=ucs-bom,UTF-8,GBK,BIG5
 set fileencoding=UTF-8
 set fileformat=unix
 
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set expandtab
 set smarttab
 set backspace=2
@@ -37,11 +37,16 @@ Bundle 'gmarik/vundle'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'vim-scripts/Emmet.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tomasr/molokai'
+
+Bundle 'slim-template/vim-slim'
 
 filetype plugin indent on
 
 " Maps
-map <C-B> :NERDTreeToggle<CR>
+" map <C-B> :NERDTreeToggle<CR>
 
 " AutoCommands
-au VimEnter * NERDTree
+" au VimEnter * NERDTree
+
+colorscheme molokai
