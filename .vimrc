@@ -1,8 +1,11 @@
-set nu
+set number
 set ruler
+set laststatus=2
+set cursorline
 set showmode
 set autoindent
 set hlsearch
+syntax enable
 syntax on
 set matchpairs=(:),{:},[:],<:>,':',":"
 
@@ -17,17 +20,27 @@ set expandtab
 set smarttab
 set backspace=2
 
-runtime macros/matchit.vim
+set foldmethod=manual
+set nofoldenable
+
+filetype on
 filetype plugin on
 
+runtime macros/matchit.vim
+set nocompatible
+set incsearch
+set ignorecase
+set wildmenu
+set mouse=a
+
+let mapleader=";"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle start
 " To use vundle, follow these steps:
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " Launch vim, run :BundleInstall
 " done
-
-set nocompatible
-filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -36,17 +49,22 @@ Bundle 'gmarik/vundle'
 
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'vim-scripts/Emmet.vim'
+Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'tomasr/molokai'
 
 Bundle 'slim-template/vim-slim'
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Setup for bundles
+"
 filetype plugin indent on
-
-" Maps
-" map <C-B> :NERDTreeToggle<CR>
-
-" AutoCommands
-" au VimEnter * NERDTree
-
 colorscheme molokai
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Shortcuts start 
+" Use ;; to jump between the pairs
+nmap <Leader>; %
+" Use ;nt to open/close NERDTree
+nmap <Leader>nt :NERDTreeToggle<CR>
