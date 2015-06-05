@@ -6,8 +6,8 @@ alias FUCK='fuck'
 alias eg='eg --no-color'
 alias ta='tmux a -t'
 alias tls='tmux ls'
+alias pt='ping 8.8.8.8'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
-
-eval "$(pyenv init -)"
+export GOPATH="/usr/local/lib/go"
