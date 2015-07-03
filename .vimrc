@@ -59,6 +59,7 @@ Plugin 'bling/vim-bufferline'
 Plugin 'slim-template/vim-slim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'easymotion/vim-easymotion'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup for bundles
@@ -105,3 +106,6 @@ nmap k gk
 
 " Remove the underline of CursorLine
 :hi CursorLine term=bold cterm=bold
+
+" Use ;f to start easymotion
+nmap <Leader>f <Plug>(easymotion-prefix)
