@@ -6,6 +6,7 @@ alias FUCK='fuck'
 alias eg='eg --no-color'
 alias ta='tmux a -t'
 alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
 alias pt='ping 8.8.8.8'
 
 # Added by termtile (https://github.com/apaszke/termtile)
