@@ -1,6 +1,10 @@
-# python virtualenv
-export WORKON_HOME=$HOME/Workspace/Envs
-source /usr/local/bin/virtualenvwrapper.sh
+# Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 
-# set caps-lock to ctrl
-setxkbmap -option ctrl:nocaps
+export TERM="xterm-256color"
+
+export PATH=/usr/local/p/versions/python:$PATH
+
+export NVM_DIR="/Users/zack/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+

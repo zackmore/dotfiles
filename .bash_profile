@@ -1,8 +1,15 @@
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PS1="\[⭕️ \]\h:\W\[\033[31m\]\$(git-radar --bash --fetch)\[\033[00m\] \u\$ "
+#export PS1="⭕️ \h:\W\[\033[31m\]\$(git-radar --bash --fetch)\[\033[00m\] \u\$ "
+export PS1="⭕️  \W\[\033[31m\]\$(git-radar --bash --fetch)\[\033[00m\] \$ "
+
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+
+# pyenv and pyenv-virtualenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
