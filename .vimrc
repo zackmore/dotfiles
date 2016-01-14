@@ -60,6 +60,8 @@ Plugin 'slim-template/vim-slim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'statianzo/vim-jade'
+Plugin 'vim-scripts/DrawIt'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup for bundles
@@ -88,6 +90,10 @@ nmap <Leader>b :TagbarToggle<CR>
 :let g:ctrlp_working_path_mode = 0
 :let g:ctrlp_dotfiles = 0
 :let g:ctrlp_switch_buffer = 0
+let g:ctrlp_user_command = [
+    \ '.git', 'cd %s && git ls-files . -co --exclude-standard',
+    \ 'find %s -type f'
+    \ ]
 
 " Use Ctrl-n/Ctrl-p to jump next/prev buffer
 nmap <C-n> :bn<CR>
