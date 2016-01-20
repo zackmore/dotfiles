@@ -7,6 +7,8 @@ alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 alias pt='ping 8.8.8.8'
 
+alias n='ntrans'
+
 # Added by termtile (https://github.com/apaszke/termtile)
 alias ttul='osascript ~/.termtile/tile.scpt up left'
 alias ttur='osascript ~/.termtile/tile.scpt up right'
