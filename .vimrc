@@ -23,8 +23,7 @@ set backspace=2
 set foldmethod=manual
 set nofoldenable
 
-filetype on
-filetype plugin on
+colorscheme desert
 
 runtime macros/matchit.vim
 set nocompatible
@@ -44,7 +43,7 @@ let mapleader=';'
 " done
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 
 Plugin 'gmarik/vundle'
 
@@ -65,11 +64,23 @@ Plugin 'vim-scripts/DrawIt'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'lambdatoast/elm.vim'
 
+call vundle#end()
+
+filetype off
+filetype plugin on
+filetype plugin indent on
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup for bundles
-"
-filetype plugin indent on
-" colorscheme molokai
+" Syntastic recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcuts start 
