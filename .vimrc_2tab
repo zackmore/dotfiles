@@ -13,9 +13,9 @@ set fileencodings=ucs-bom,UTF-8,GBK,BIG5
 set fileencoding=UTF-8
 set fileformat=unix
 
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set expandtab
 set smarttab
 set backspace=2
