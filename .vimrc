@@ -63,6 +63,7 @@ Plugin 'statianzo/vim-jade'
 Plugin 'vim-scripts/DrawIt'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'posva/vim-vue'
 
 call vundle#end()
 
