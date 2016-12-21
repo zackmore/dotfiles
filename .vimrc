@@ -23,7 +23,7 @@ set backspace=2
 set foldmethod=manual
 set nofoldenable
 
-colorscheme desert
+colorscheme peachpuff
 
 runtime macros/matchit.vim
 set nocompatible
@@ -64,6 +64,7 @@ Plugin 'vim-scripts/DrawIt'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'posva/vim-vue'
+Plugin 'neovimhaskell/haskell-vim'
 
 call vundle#end()
 
