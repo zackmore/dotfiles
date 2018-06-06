@@ -13,9 +13,9 @@ set fileencodings=ucs-bom,UTF-8,GBK,BIG5
 set fileencoding=UTF-8
 set fileformat=unix
 
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set expandtab
 set smarttab
 set backspace=2
@@ -36,55 +36,41 @@ set mouse=a
 let mapleader=';'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" Vundle start
-" To use vundle, follow these steps:
-" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-" Launch vim, run :BundleInstall
-" done
+" vim-plug
+" https://github.com/junegunn/vim-plug
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Auto install vim-plug
+" if empty(glob('~/.vim/autoload/plug.vim'))
+"   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+"     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" endif
 
-Plugin 'gmarik/vundle'
+" Install Plugs
+call plug#begin('~/.vim/plugged')
 
-Plugin 'vim-scripts/Emmet.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tomasr/molokai'
-Plugin 'Keithbsmiley/swift.vim'
-Plugin 'bling/vim-airline'
-Plugin 'bling/vim-bufferline'
-Plugin 'slim-template/vim-slim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'statianzo/vim-jade'
-Plugin 'vim-scripts/DrawIt'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'lambdatoast/elm.vim'
-Plugin 'posva/vim-vue'
-Plugin 'neovimhaskell/haskell-vim'
+Plug 'vim-scripts/Emmet.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tomasr/molokai'
+Plug 'Keithbsmiley/swift.vim'
+Plug 'bling/vim-airline'
+Plug 'bling/vim-bufferline'
+Plug 'slim-template/vim-slim'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'easymotion/vim-easymotion'
+Plug 'statianzo/vim-jade'
+Plug 'vim-scripts/DrawIt'
+Plug 'elixir-lang/vim-elixir'
+Plug 'lambdatoast/elm.vim'
+Plug 'posva/vim-vue'
+Plug 'neovimhaskell/haskell-vim'
 
-call vundle#end()
-
-filetype off
-filetype plugin on
-filetype plugin indent on
+call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" Setup for bundles
-" Syntastic recommended settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugs Configurations
 " Shortcuts start 
 " Use ;q for no highlight in search
 nmap <Leader>q :nohlsearch<CR> 
