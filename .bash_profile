@@ -3,18 +3,35 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# the color scheme could be check in http://misc.flogisoft.com/bash/tip_colors_and_formatting
-# old one: export PS1="⭕️  \W\[\033[31m\]\$(git-radar --bash --fetch)\[\033[00m\] \$  \[\033[40m\]"
-export PS1="\[\033[31m\]λ \[\033[00m\]\W\[\033[31m\]\$(git-radar --bash --fetch) \[\033[97m\]\$ \[\033[00m\]"
+export PS1="🕹  \[\033[33m\]\W \[\033[00m\] $ "
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+# https://github.com/magicmonty/bash-git-prompt
+GIT_PROMPT_ONLY_IN_REPO=1
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
 
 # pyenv and pyenv-virtualenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# thefuck
-eval "$(thefuck --alias)"
-eval "$(thefuck --alias FUCK)"
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Alias
+alias gb='git branch'
+alias gc='git checkout'
+alias gm='git merge'
+alias gr='git rebase'
+alias gpush='git push'
+alias gpull='git pull'
