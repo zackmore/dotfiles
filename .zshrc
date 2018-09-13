@@ -1,9 +1,3 @@
-# Install zsh on Mac
-# $ brew install zsh zsh-completions
-# $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-# $ chsh -s /bin/zsh
-
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -137,9 +131,16 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Alias
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gc='git commit -m'
+
 alias gb='git branch'
-alias gc='git checkout'
+alias gck='git checkout'
+
 alias gm='git merge'
 alias gr='git rebase'
+
 alias gpush='git push'
 alias gpull='git pull'
