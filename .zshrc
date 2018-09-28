@@ -131,6 +131,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Alias
+## Git
 alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
@@ -138,9 +139,7 @@ alias gc='git commit -m'
 
 alias gb='git branch'
 alias gck='git checkout'
-
-alias gm='git merge'
-alias gr='git rebase'
-
-alias gpush='git push'
-alias gpull='git pull'
+## Tmux
+alias ta='tmux attach-session -t'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
