@@ -1,18 +1,8 @@
-[filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
 [user]
-	name = zackmore
-	email = zackmoredev@gmail.com
-[credential]
-	helper = osxkeychain
-[http]
-	postBuffer = 524288000
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  name = zackmore
+  email = zackmoredev@gmail.com
+
+# https://github.com/so-fancy/diff-so-fancy
 [pager]
-	diff = diff-so-fancy | less --tabs=1,5 -RFX
-	show = diff-so-fancy | less --tabs=1,5 -RFX
+  diff = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX
