@@ -32,7 +32,7 @@ set incsearch
 set ignorecase
 set smartcase
 set wildmenu
-set mouse=a
+set mouse=r
 
 let mapleader=';'
 
