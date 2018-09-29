@@ -1,7 +1,6 @@
 set number
 set ruler
 set laststatus=2
-set cursorline!
 set lazyredraw
 set showmode
 set autoindent
@@ -115,7 +114,12 @@ nmap k gk
 :cnoremap <C-d> <Delete>
 
 " Remove the underline of CursorLine
-:hi CursorLine term=bold cterm=bold
+" :hi CursorLine term=bold cterm=bold
+
+" No CursorLine
+:hi CursorLine term=none
+:hi CursorLine cterm=none
+:hi CursorLine gui=none
 
 " Use ;f to start easymotion
 nmap <Leader>f <Plug>(easymotion-prefix)
