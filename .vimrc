@@ -1,7 +1,8 @@
 set number
 set ruler
 set laststatus=2
-set cursorline
+set cursorline!
+set lazyredraw
 set showmode
 set autoindent
 set hlsearch
@@ -50,7 +51,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/Emmet.vim'
-Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tomasr/molokai'
@@ -68,7 +68,7 @@ Plug 'lambdatoast/elm.vim'
 Plug 'posva/vim-vue'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'junegunn/goyo.vim'
-Plug 'leafgarland/typescript-vim'
+Plug 'chemzqm/wxapp.vim'
 
 call plug#end()
 
@@ -119,20 +119,3 @@ nmap k gk
 
 " Use ;f to start easymotion
 nmap <Leader>f <Plug>(easymotion-prefix)
-
-" ale
-let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\}
-let g:ale_sign_column_always = 0
-let g:ale_set_highlights = 0
-" 自定义图标
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚡'
-"普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
-nmap sp <Plug>(ale_previous_wrap)
-nmap sn <Plug>(ale_next_wrap)
-"<Leader>s触发/关闭语法检查
-nmap <Leader>s :ALEToggle<CR>
-"<Leader>d查看错误或警告的详细信息
-nmap <Leader>d :ALEDetail<CR>
