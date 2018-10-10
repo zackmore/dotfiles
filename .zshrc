@@ -131,6 +131,10 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Alias
+## Fix ctags
+## $ brew install ctags
+alias ctags="`brew --prefix`/bin/ctags"
+
 ## Git
 alias gs='git status'
 alias gd='git diff'
