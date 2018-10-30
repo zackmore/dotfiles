@@ -115,11 +115,6 @@ export NVM_DIR="/Users/zack/.nvm"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# pyenv and pyenv-virtualenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -132,7 +127,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Alias
 ## Fix ctags
-## $ brew install ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
 ## Git
@@ -143,7 +137,13 @@ alias gc='git commit -m'
 
 alias gb='git branch'
 alias gck='git checkout'
+
+alias gps='git push'
+alias gpl='git pull'
 ## Tmux
 alias ta='tmux attach-session -t'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
+
+# Autorun
+neofetch
