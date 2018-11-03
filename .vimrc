@@ -68,6 +68,9 @@ Plug 'posva/vim-vue'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'chemzqm/wxapp.vim'
+Plug 'craigemery/vim-autotag'
+Plug 'chrisbra/csv.vim'
+Plug 'tpope/vim-jdaddy'
 
 call plug#end()
 
