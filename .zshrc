@@ -145,5 +145,14 @@ alias ta='tmux attach-session -t'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 
+## Docker
+alias d='docker'
+
 # Autorun
 neofetch
+
+# Homebrew upgrade fixed
+export PATH="/usr/local/opt/ncurses/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/ncurses/lib"
+export CPPFLAGS="-I/usr/local/opt/ncurses/include"
+export PKG_CONFIG_PATH="/usr/local/opt/ncurses/lib/pkgconfig"
