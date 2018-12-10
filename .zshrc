@@ -126,18 +126,14 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Alias
-## Fix ctags
-alias ctags="`brew --prefix`/bin/ctags"
-
 ## Git
+alias cdr='cd `git rev-parse --show-cdup`'
 alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
 alias gc='git commit -m'
-
 alias gb='git branch'
 alias gck='git checkout'
-
 alias gps='git push'
 alias gpl='git pull'
 ## Tmux

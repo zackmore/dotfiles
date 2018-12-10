@@ -52,14 +52,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/Emmet.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
-Plug 'tomasr/molokai'
-Plug 'Keithbsmiley/swift.vim'
+" Plug 'tomasr/molokai'
+" Plug 'Keithbsmiley/swift.vim'
 Plug 'bling/vim-airline'
 Plug 'bling/vim-bufferline'
 Plug 'slim-template/vim-slim'
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
 Plug 'statianzo/vim-jade'
 Plug 'vim-scripts/DrawIt'
 Plug 'elixir-lang/vim-elixir'
@@ -68,9 +68,10 @@ Plug 'posva/vim-vue'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'chemzqm/wxapp.vim'
-Plug 'craigemery/vim-autotag'
 Plug 'chrisbra/csv.vim'
 Plug 'tpope/vim-jdaddy'
+Plug 'joeytwiddle/sexy_scroller.vim'
+" Plug 'craigemery/vim-autotag'
 
 call plug#end()
 
@@ -88,7 +89,7 @@ nmap <Leader>; :CtrlPBuffer<CR>
 nmap <Leader>' :CtrlPTag<CR>
 
 " Use ;b to open/close Tagbar
-nmap <Leader>b :TagbarToggle<CR>
+nmap <Leader>r :TagbarToggle<CR>
 
 :let g:ctrlp_map = '<Leader>;'
 :let g:ctrlp_match_window_bottom = 0
@@ -125,6 +126,3 @@ nmap k gk
 :hi CursorLine term=none
 :hi CursorLine cterm=none
 :hi CursorLine gui=none
-
-" Use ;f to start easymotion
-nmap <Leader>f <Plug>(easymotion-prefix)
