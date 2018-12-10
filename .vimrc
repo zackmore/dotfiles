@@ -52,8 +52,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/Emmet.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
-" Plug 'tomasr/molokai'
-" Plug 'Keithbsmiley/swift.vim'
+Plug 'Keithbsmiley/swift.vim'
 Plug 'bling/vim-airline'
 Plug 'bling/vim-bufferline'
 Plug 'slim-template/vim-slim'
@@ -104,7 +103,12 @@ nmap <Leader>r :TagbarToggle<CR>
     \ ]
 :let g:airline#extensions#tagbar#enabled = 0
 
-" Use Ctrl-n/Ctrl-p to jump next/prev buffer
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Keys Remapping
+
+" Use Ctrl-n to jump next buffer
+" Use Ctrl-p to jump prev buffer
+" Use Ctrl-k to kill current buffer
 nmap <C-n> :bn<CR>
 nmap <C-p> :bp<CR>
 nmap <C-k> :bp\|bd #<CR>
@@ -118,9 +122,6 @@ nmap k gk
 :cnoremap <C-b> <Left>
 :cnoremap <C-f> <Right>
 :cnoremap <C-d> <Delete>
-
-" Remove the underline of CursorLine
-" :hi CursorLine term=bold cterm=bold
 
 " No CursorLine
 :hi CursorLine term=none
