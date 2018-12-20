@@ -61,7 +61,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'chrisbra/csv.vim'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-surround'
-" Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
@@ -71,16 +70,15 @@ call plug#end()
 " Use ;q for no highlight in search
 nmap <Leader>q :nohlsearch<CR> 
 
-" Use ;t to open/close NERDTree
+" NERDTree
 nmap <Leader>t :NERDTreeToggle<CR>
 
-" Use ;; to open CtrlPBuffer
-nmap <Leader>; :CtrlPBuffer<CR>
-nmap <Leader>' :CtrlPTag<CR>
-
-" Use ;b to open/close Tagbar
+" tarbar
 nmap <Leader>r :TagbarToggle<CR>
 
+" Plug Ctrlp
+nmap <Leader>; :CtrlPBuffer<CR>
+nmap <Leader>' :CtrlPTag<CR>
 :let g:ctrlp_map = '<Leader>;'
 :let g:ctrlp_match_window_bottom = 0
 :let g:ctrlp_match_window_reversed = 0
@@ -102,7 +100,7 @@ nmap <Leader>r :TagbarToggle<CR>
 " Use Ctrl-k to kill current buffer
 nmap <C-n> :bn<CR>
 nmap <C-p> :bp<CR>
-nmap <C-k> :bp\|bd #<CR>
+nmap <C-x> :bp\|bd #<CR>
 
 " Line wise in movement
 nmap j gj
