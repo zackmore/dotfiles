@@ -134,15 +134,16 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gb='git branch'
 alias gck='git checkout'
-alias gps='git push'
-alias gpl='git pull'
+alias gpu='git push'
+alias gpd='git pull'
 ## Tmux
 alias ta='tmux attach-session -t'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
-
 ## Docker
 alias d='docker'
+## Ctags, install universal-ctags before
+alias ctags='ctags --exclude=node_modules --exclude=.git --exclude=target -R .'
 
 # Autorun
 neofetch
