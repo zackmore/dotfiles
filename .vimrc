@@ -58,10 +58,8 @@ Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/DrawIt'
 Plug 'junegunn/goyo.vim'
-Plug 'chemzqm/wxapp.vim'
 Plug 'chrisbra/csv.vim'
 Plug 'tpope/vim-jdaddy'
-Plug 'joeytwiddle/sexy_scroller.vim'
 Plug 'tpope/vim-surround'
 " Plug 'easymotion/vim-easymotion'
 
@@ -109,6 +107,10 @@ nmap <C-k> :bp\|bd #<CR>
 " Line wise in movement
 nmap j gj
 nmap k gk
+
+" Extra Line Scroll with Cursor
+nmap <C-e> <C-e>j
+nmap <C-y> <C-y>k
 
 " Readline like in command line
 :cnoremap <C-a> <Home>
