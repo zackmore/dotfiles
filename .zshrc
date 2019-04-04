@@ -126,10 +126,13 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Alias
+## Fake rm
+alias trash='rm'
 ## Git
 alias cdr='cd `git rev-parse --show-cdup`'
 alias gs='git status'
 alias gd='git diff'
+alias gdc='git diff --cached'
 alias ga='git add'
 alias gc='git commit'
 alias gb='git branch'
@@ -157,3 +160,6 @@ export PATH="/usr/local/opt/ncurses/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ncurses/lib"
 export CPPFLAGS="-I/usr/local/opt/ncurses/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ncurses/lib/pkgconfig"
+
+# Other tools
+source ~/Git/z/z.sh
