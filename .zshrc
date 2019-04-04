@@ -127,7 +127,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Alias
 ## Fake rm
-alias trash='rm'
+alias rm='trash'
 ## Git
 alias cdr='cd `git rev-parse --show-cdup`'
 alias gs='git status'
