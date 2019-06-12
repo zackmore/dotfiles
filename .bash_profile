@@ -28,6 +28,9 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# Golang
+export PATH=$PATH:/usr/local/go/bin
+
 # Alias
 alias gb='git branch'
 alias gc='git checkout'
