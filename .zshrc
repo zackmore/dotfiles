@@ -130,8 +130,8 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 
 # Alias
-## Fake rm
-alias rm='trash'
+alias rm='trash' # https://github.com/ali-rantakari/trash
+alias ping='prettyping' # https://github.com/denilsonsa/prettyping
 ## Git
 alias cdr='cd `git rev-parse --show-cdup`'
 alias gs='git status'
