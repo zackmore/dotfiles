@@ -132,8 +132,8 @@ export GOPATH=$HOME/go
 # Alias
 alias rm='trash' # https://github.com/ali-rantakari/trash
 alias ping='prettyping' # https://github.com/denilsonsa/prettyping
-alias ss='export http_proxy=http://127.0.0.1:1087 https_proxy=https://127.0.0.1:1087'
-alias noss='unset http_proxy https_proxy' 
+alias sson='export http_proxy=http://127.0.0.1:1087 https_proxy=https://127.0.0.1:1087'
+alias ssoff='unset http_proxy https_proxy' 
 ## Git
 alias cdr='cd `git rev-parse --show-cdup`'
 alias gs='git status'
