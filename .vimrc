@@ -1,4 +1,4 @@
-set number
+set number relativenumber
 set ruler
 set laststatus=2
 set lazyredraw
@@ -23,7 +23,7 @@ set backspace=2
 set foldmethod=manual
 set nofoldenable
 
-colorscheme peachpuff
+" colorscheme peachpuff
 
 runtime macros/matchit.vim
 set nocompatible
@@ -61,6 +61,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'chrisbra/csv.vim'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-surround'
+Plug 'posva/vim-vue'
+Plug 'fatih/vim-go'
+Plug 'dart-lang/dart-vim-plugin'
 
 call plug#end()
 
@@ -100,7 +103,7 @@ nmap <Leader>' :CtrlPTag<CR>
 " Use Ctrl-k to kill current buffer
 nmap <C-n> :bn<CR>
 nmap <C-p> :bp<CR>
-nmap <C-x> :bp\|bd #<CR>
+nmap <C-k> :bp\|bd #<CR>
 
 " Line wise in movement
 nmap j gj
