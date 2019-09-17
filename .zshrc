@@ -128,10 +128,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Golang
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # Alias
 alias rm='trash' # https://github.com/ali-rantakari/trash
-alias ping='prettyping' # https://github.com/denilsonsa/prettyping
 alias sson='export http_proxy=http://127.0.0.1:1087 https_proxy=https://127.0.0.1:1087'
 alias ssoff='unset http_proxy https_proxy' 
 ## Git
