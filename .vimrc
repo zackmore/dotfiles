@@ -51,7 +51,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/Emmet.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
 Plug 'bling/vim-airline'
 Plug 'bling/vim-bufferline'
 Plug 'kien/ctrlp.vim'
@@ -60,10 +59,11 @@ Plug 'vim-scripts/DrawIt'
 Plug 'junegunn/goyo.vim'
 Plug 'chrisbra/csv.vim'
 Plug 'tpope/vim-jdaddy'
-Plug 'tpope/vim-surround'
 Plug 'posva/vim-vue'
 Plug 'fatih/vim-go'
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -94,6 +94,9 @@ nmap <Leader>' :CtrlPTag<CR>
     \ 'find %s -type f'
     \ ]
 :let g:airline#extensions#tagbar#enabled = 0
+
+" Plug commentary
+noremap <leader>/ :Commentary<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Keys Remapping
