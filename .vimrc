@@ -95,8 +95,11 @@ nmap <Leader>' :CtrlPTag<CR>
     \ ]
 :let g:airline#extensions#tagbar#enabled = 0
 
+" Plug vim-prettier
+noremap <Leader>p :PrettierAsync<CR>
+
 " Plug commentary
-noremap <leader>/ :Commentary<CR>
+noremap <Leader>/ :Commentary<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Keys Remapping
