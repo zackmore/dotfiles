@@ -106,9 +106,6 @@ export TERM="xterm-256color"
 
 export PATH=/usr/local/p/versions/python:$PATH
 
-export NVM_DIR="/Users/zack/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # Original .bash_profile
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
@@ -129,10 +126,12 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export GO111MODULE=on
+export GOPROXY=https://goproxy.io
 
 # Alias
 alias rm='trash' # https://github.com/ali-rantakari/trash
-alias sson='export http_proxy=http://127.0.0.1:1087 https_proxy=https://127.0.0.1:1087'
+alias sson='export http_proxy=http://127.0.0.1:8001 https_proxy=https://127.0.0.1:8001'
 alias ssoff='unset http_proxy https_proxy' 
 ## Git
 alias cdr='cd `git rev-parse --show-cdup`'
