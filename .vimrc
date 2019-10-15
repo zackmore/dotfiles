@@ -23,8 +23,6 @@ set backspace=2
 set foldmethod=manual
 set nofoldenable
 
-" colorscheme peachpuff
-
 runtime macros/matchit.vim
 set nocompatible
 set incsearch
@@ -35,6 +33,8 @@ set mouse=r
 
 let mapleader=';'
 
+runtime colors/adventurous.vim
+colorscheme adventurous
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug
 " https://github.com/junegunn/vim-plug
@@ -64,6 +64,8 @@ Plug 'fatih/vim-go'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'tpope/vim-commentary'
+Plug 'leafgarland/typescript-vim'
+" Plug 'Dru89/vim-adventurous'
 
 call plug#end()
 
