@@ -131,7 +131,7 @@ export GOPROXY=https://goproxy.io
 
 # Alias
 alias rm='trash' # https://github.com/ali-rantakari/trash
-alias sson='export http_proxy=http://127.0.0.1:8001 https_proxy=https://127.0.0.1:8001'
+alias sson='export http_proxy=http://127.0.0.1:1087 https_proxy=https://127.0.0.1:1087'
 alias ssoff='unset http_proxy https_proxy' 
 ## Git
 alias cdr='cd `git rev-parse --show-cdup`'
