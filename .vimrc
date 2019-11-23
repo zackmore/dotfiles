@@ -23,6 +23,8 @@ set backspace=2
 set foldmethod=manual
 set nofoldenable
 
+colorscheme peachpuff
+
 runtime macros/matchit.vim
 set nocompatible
 set incsearch
@@ -33,8 +35,6 @@ set mouse=r
 
 let mapleader=';'
 
-runtime colors/adventurous.vim
-colorscheme adventurous
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug
 " https://github.com/junegunn/vim-plug
@@ -64,8 +64,7 @@ Plug 'fatih/vim-go'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'tpope/vim-commentary'
-Plug 'leafgarland/typescript-vim'
-" Plug 'Dru89/vim-adventurous'
+Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
 
@@ -102,6 +101,12 @@ noremap <Leader>p :PrettierAsync<CR>
 
 " Plug commentary
 noremap <Leader>/ :Commentary<CR>
+
+" Plug vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+" :hi IndentGuidesOdd  ctermbg=17
+:hi IndentGuidesEven ctermbg=17
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Keys Remapping
