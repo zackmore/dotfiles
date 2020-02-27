@@ -132,7 +132,7 @@ export GOPROXY=https://goproxy.io
 
 # Alias
 alias rm='trash' # https://github.com/ali-rantakari/trash
-alias sson='export http_proxy=http://127.0.0.1:1087 https_proxy=https://127.0.0.1:1087'
+alias sson='export http_proxy=http://127.0.0.1:1086 https_proxy=https://127.0.0.1:1086'
 alias ssoff='unset http_proxy https_proxy' 
 ## Git
 alias cdr='cd `git rev-parse --show-cdup`'
@@ -149,6 +149,7 @@ alias gsh='git show'
 alias gl='git log --oneline'
 alias gll='git log --graph'
 alias glll='git log --graph --stat'
+alias gab = 'git remote prune origin && git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname)' refs/heads refs/remotes'
 ## Tmux
 alias ta='tmux attach-session -t'
 alias tls='tmux ls'
