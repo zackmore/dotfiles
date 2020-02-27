@@ -149,7 +149,7 @@ alias gsh='git show'
 alias gl='git log --oneline'
 alias gll='git log --graph'
 alias glll='git log --graph --stat'
-alias gab="git remote prune origin && git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname)' refs/heads refs/remotes"
+alias gab="git remote prune origin && git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname)' refs/remotes"
 ## Tmux
 alias ta='tmux attach-session -t'
 alias tls='tmux ls'
