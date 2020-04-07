@@ -52,7 +52,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/Emmet.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
-Plug 'bling/vim-bufferline'
+" Plug 'bling/vim-bufferline'
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/DrawIt'
@@ -94,6 +94,10 @@ nmap <Leader>' :CtrlPTag<CR>
     \ '.git', 'cd %s && git ls-files . -co --exclude-standard',
     \ 'find %s -type f'
     \ ]
+" Plug vim-airline
+:let g:airline#extensions#tabline#enabled = 1
+:let g:airline#extensions#tabline#formatter = 'jsformatter'
+:let g:airline#extensions#tabline#show_tabs = 0
 :let g:airline#extensions#tagbar#enabled = 0
 
 " Plug vim-prettier
@@ -105,7 +109,7 @@ noremap <Leader>/ :Commentary<CR>
 " Plug vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
-" :hi IndentGuidesOdd  ctermbg=17
+" :hi IndentGuidesOdd  ctermbg=18
 :hi IndentGuidesEven ctermbg=17
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -114,9 +118,15 @@ let g:indent_guides_auto_colors = 0
 " Use Ctrl-n to jump next buffer
 " Use Ctrl-p to jump prev buffer
 " Use Ctrl-k to kill current buffer
-nmap <C-n> :bn<CR>
-nmap <C-p> :bp<CR>
-nmap <C-k> :bp\|bd #<CR>
+nmap <C-l> :bn<CR>
+nmap <C-h> :bp<CR>
+nmap <C-d> :bp\|bd #<CR>
+
+" Move lines
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Line wise in movement
 nmap j gj
@@ -127,10 +137,14 @@ nmap <C-e> <C-e>j
 nmap <C-y> <C-y>k
 
 " Readline like in command line
-:cnoremap <C-a> <Home>
-:cnoremap <C-b> <Left>
-:cnoremap <C-f> <Right>
-:cnoremap <C-d> <Delete>
+" :cnoremap <C-a> <Home>
+" :cnoremap <C-b> <Left>
+" :cnoremap <C-f> <Right>
+" :cnoremap <C-d> <Delete>
+
+" Ctags
+" Jump definition forward in a new buffer
+nnoremap <C-m> <C-]>
 
 " No CursorLine
 :hi CursorLine term=none
