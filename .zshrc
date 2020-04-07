@@ -156,8 +156,10 @@ alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 ## Docker
 alias d='docker'
-## Ctags, install universal-ctags before
-alias ctags='ctags --exclude=node_modules --exclude=.git --exclude=target -R .'
+## Ctags
+## brew install ctags-exuberant
+## ctags config: https://github.com/romainl/ctags-patterns-for-javascript
+alias ctags='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 
 # Autorun
 # neofetch
