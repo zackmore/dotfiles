@@ -134,6 +134,7 @@ export GOPROXY=https://goproxy.io
 alias rm='trash' # https://github.com/ali-rantakari/trash
 alias sson='export http_proxy=http://127.0.0.1:1086 https_proxy=https://127.0.0.1:1086'
 alias ssoff='unset http_proxy https_proxy' 
+
 ## Git
 alias cdr='cd `git rev-parse --show-cdup`'
 alias gs='git status'
@@ -150,12 +151,19 @@ alias gl='git log --oneline'
 alias gll='git log --graph'
 alias glll='git log --graph --stat'
 alias gab="git remote prune origin && git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname)' refs/remotes"
+
 ## Tmux
 alias ta='tmux attach-session -t'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
+
 ## Docker
 alias d='docker'
+
+## Deno
+export DENO_INSTALL="/Users/qinzeng/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 ## Ctags
 ## brew install ctags-exuberant
 ## ctags config: https://github.com/romainl/ctags-patterns-for-javascript
