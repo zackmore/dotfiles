@@ -32,6 +32,7 @@ set ignorecase
 set smartcase
 set wildmenu
 set mouse=r
+set previewheight=100
 
 let mapleader=';'
 
@@ -65,6 +66,8 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'tpope/vim-commentary'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Quramy/tsuquyomi'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
